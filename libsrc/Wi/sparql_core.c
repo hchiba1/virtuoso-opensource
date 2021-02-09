@@ -4616,8 +4616,8 @@ sparp_make_builtin_call (sparp_t *sparp, ptrlong bif_id, SPART **arguments)
       argcount = BOX_ELEMENTS_0 (arguments);
       if (argcount < sbd->sbd_minargs)
         sparyyerror_impl (sparp, NULL, t_box_sprintf (100, "Insufficient number of arguments of a standard built-in function %s()", sbd->sbd_name));
-      if (argcount > sbd->sbd_maxargs)
-        sparyyerror_impl (sparp, NULL, t_box_sprintf (100, "Too many arguments of a standard built-in function %s()", sbd->sbd_name));
+      /* if (argcount > sbd->sbd_maxargs) */
+      /*   sparyyerror_impl (sparp, NULL, t_box_sprintf (100, "Too many arguments of a standard built-in function %s()", sbd->sbd_name)); */
       goto ofs_found; /* see below */
     }
   spar_internal_error (sparp, "sparp" "_make_builtin_call(): bad bif_id");
