@@ -1013,8 +1013,6 @@ extern void spar_sqlprint_error_impl (spar_sqlgen_t *ssg, const char *msg);
       ind = 1 + ind * SSG_INDENT_FACTOR - (back); \
     else \
       ind = 1; \
-    if (SSG_MAX_ALLOWED_LINE_COUNT == ssg->ssg_line_count++) \
-      spar_sqlprint_error_impl (ssg, "The length of generated SQL text has exceeded 10000 lines of code"); \
     session_buffered_write (ssg->ssg_out, "\n                              ", (ind > 31) ? 31 : ind); \
     } while (0)
 
