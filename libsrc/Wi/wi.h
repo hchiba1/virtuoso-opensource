@@ -75,11 +75,11 @@ typedef int errno_t;
 #endif
 #endif
 
-#ifdef LARGE_QI_INST
+/* #ifdef LARGE_QI_INST */
 #define MAX_STATE_SLOTS 0xffffe
-#else
-#define MAX_STATE_SLOTS 0xfffe
-#endif
+/* #else */
+/* #define MAX_STATE_SLOTS 0xfffe */
+/* #endif */
 #define STATE_SLOT_LIMIT (MAX_STATE_SLOTS-500)
 
 typedef struct remap_s remap_t;
