@@ -2426,12 +2426,12 @@ code_to_cv_1 (sql_comp_t * sc, dk_set_t code, int trim_one_long_cv)
 
       list = dk_set_nreverse (code);
       byte_len = code_vec_byte_len (list);
-      if (BOFS_TO_OFS (byte_len) > SHRT_MAX)
-	{
-	  sqlc_new_error (sc->sc_cc, "42000", "SQ199",
-	      "Maximum size (%ld) of a code vector exceeded by %ld bytes. "
-	      "Please split the code in smaller units.", (long) SHRT_MAX, (long) (byte_len - SHRT_MAX));
-	}
+    /*   if (BOFS_TO_OFS (byte_len) > SHRT_MAX) */
+	/* { */
+	/*   sqlc_new_error (sc->sc_cc, "42000", "SQ199", */
+	/*       "Maximum size (%ld) of a code vector exceeded by %ld bytes. " */
+	/*       "Please split the code in smaller units.", (long) SHRT_MAX, (long) (byte_len - SHRT_MAX)); */
+	/* } */
       cv = (code_vec_t) dk_alloc_box (byte_len, DV_BIN);
       dins = cv;
 
